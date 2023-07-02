@@ -9,7 +9,7 @@
         public Guid IdMedico { get; set; }
         public string NomeMedico { get; set; }
         public string CPFMedico { get; set; }
-        public string EspecialidadeMedico { get; set; }
+        public string MedicoEspecialidade { get; set; }
         public string TextoProntuario { get; set; }
     }
 }

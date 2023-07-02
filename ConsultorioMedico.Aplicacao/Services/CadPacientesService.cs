@@ -203,14 +203,14 @@ namespace ConsultorioMedico.Aplicacao.Services
             if (!Guid.TryParse(id, out var guid))
                 return false;
 
-            var cadCliente = await _repository.GetByCode(guid.ToString());
+            var cadPaciente = await _repository.GetByCode(guid.ToString());
 
-            if (cadCliente == null)
+            if (cadPaciente == null)
                 return false;
 
-            //cadCliente.Update(model.Nome, model.CPF);
+            cadPaciente.Update(model.Nome, model.CPF);
 
-            await _repository.Update(cadCliente);
+            await _repository.Update(cadPaciente);
 
             return true;
         }
