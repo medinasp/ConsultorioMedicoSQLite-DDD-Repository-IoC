@@ -1,15 +1,13 @@
-﻿using ConsultorioMedico.Dominio.Entities;
-
-namespace ConsultorioMedico.Aplicacao.InputModels
+﻿namespace ConsultorioMedico.Aplicacao.InputModels
 {
     public class ProntuariosInputModel
     {
-        public CadMedicos Medico { get; set; }
-        public CadPacientes Paciente { get; set; }
+        public Guid MedicoId { get; set; }
+        //public string MedicoNome { get; set; }
+        //public string MedicoEspecialidade { get; set; }
+        public Guid PacienteId { get; set; }
+        //public string PacienteNome { get; set; }
         public string TextoProntuario { get; set; }
-
-        public Prontuarios ToEntity()
-            => new(Medico, Paciente, TextoProntuario);
 
     }
 }
