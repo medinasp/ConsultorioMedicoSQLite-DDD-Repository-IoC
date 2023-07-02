@@ -1,4 +1,4 @@
-﻿using Consultorio.Infra;
+﻿using ConsultorioMedico.Infra;
 using ConsultorioMedico.Aplicacao.InterfacesServices;
 using ConsultorioMedico.Aplicacao.Services;
 using Microsoft.Extensions.DependencyInjection;
