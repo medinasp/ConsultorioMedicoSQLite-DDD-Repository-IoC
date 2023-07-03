@@ -60,7 +60,7 @@ namespace ConsultorioMedico.API.Controllers
         }
 
         /// <summary>
-        /// Obter todos cadastros de médicos em memória
+        /// Obter todos cadastros de médicos
         /// </summary>
         /// <returns>Médicos Cadastrados</returns>
         /// <response code="200">Sucesso</response>
@@ -130,7 +130,7 @@ namespace ConsultorioMedico.API.Controllers
         }
 
         /// <summary>
-        /// Hard Delete - Remove um cadastro do banco em memória
+        /// Hard Delete - Remove um cadastro do banco
         /// </summary>
         /// <param name="id">Identificador do cadastro de um médico específico</param>
         /// <returns>Nada</returns>
