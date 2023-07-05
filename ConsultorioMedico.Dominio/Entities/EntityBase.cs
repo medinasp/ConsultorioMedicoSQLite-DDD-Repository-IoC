@@ -1,4 +1,4 @@
-﻿namespace ConsultorioMedico
+﻿namespace ConsultorioMedico.Dominio.Entities
 {
     public abstract class EntityBase
     {
