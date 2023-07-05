@@ -13,21 +13,21 @@ namespace ConsultorioMedico.Infra.Configuration
         public DbSet<CadMedicos> CadMedicos { get; set; }
         public DbSet<CadPacientes> CadPacientes { get; set; }
 
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    if (!optionsBuilder.IsConfigured)
-        //    {
-        //    }
-        //}
-
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.ApplyConfigurationsFromAssembly(typeof(ContextBase).Assembly);
-        //    base.OnModelCreating(modelBuilder);
-        //}
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            if (Database.IsSqlite())
+            {
+                foreach (var entityType in modelBuilder.Model.GetEntityTypes())
+                {
+                    var foreignKeys = entityType.GetForeignKeys();
+
+                    foreach (var foreignKey in foreignKeys)
+                    {
+                        foreignKey.DeleteBehavior = DeleteBehavior.Cascade;
+                    }
+                }
+            }
+
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ContextBase).Assembly);
 
             modelBuilder.Entity<Prontuarios>()
@@ -46,6 +46,5 @@ namespace ConsultorioMedico.Infra.Configuration
 
             base.OnModelCreating(modelBuilder);
         }
-
     }
 }
