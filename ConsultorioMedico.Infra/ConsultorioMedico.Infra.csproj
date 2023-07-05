@@ -19,8 +19,4 @@
     <ProjectReference Include="..\ConsultorioMedico.Dominio\ConsultorioMedico.Dominio.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Db\" />
-  </ItemGroup>
-
 </Project>
