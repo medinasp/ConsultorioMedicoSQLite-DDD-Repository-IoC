@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using ConsultorioMedico.Infra.InterfacesRepositories;
 using ConsultorioMedico.Infra.Repositories;
 
 namespace ConsultorioMedico.Infra
