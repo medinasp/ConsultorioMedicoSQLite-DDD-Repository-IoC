@@ -1,5 +1,6 @@
 ﻿using ConsultorioMedico.Dominio.Entities;
 using ConsultorioMedico.Infra.Configuration;
+using ConsultorioMedico.Infra.InterfacesRepositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace ConsultorioMedico.Infra.Repositories
@@ -31,10 +32,7 @@ namespace ConsultorioMedico.Infra.Repositories
 
         public async Task<List<CadMedicos>> GetByName(string name)
         {
-            //var cadMedico = await _context.CadMedicos.FirstOrDefaultAsync(c => c.Nome == name);
-            //var cadMedico = await _context.CadMedicos.FirstOrDefaultAsync(c => EF.Functions.Like(c.Nome, $"%{name}%"));
             var cadMedico = await _context.CadMedicos.Where(c => EF.Functions.Like(c.Nome, $"%{name}%")).ToListAsync();
-
 
             return cadMedico;
         }
