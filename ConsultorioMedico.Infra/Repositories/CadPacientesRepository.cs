@@ -1,8 +1,7 @@
 ﻿using ConsultorioMedico.Dominio.Entities;
 using ConsultorioMedico.Infra.Configuration;
+using ConsultorioMedico.Infra.InterfacesRepositories;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Xml.Linq;
 
 namespace ConsultorioMedico.Infra.Repositories
 {
@@ -65,8 +64,6 @@ namespace ConsultorioMedico.Infra.Repositories
             _context.CadPacientes.Remove(cadPaciente);
             await _context.SaveChangesAsync();
         }
-
-
     }
 }
 
