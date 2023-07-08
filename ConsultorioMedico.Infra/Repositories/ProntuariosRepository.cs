@@ -1,6 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
-using ConsultorioMedico.Dominio.Entities;
+﻿using ConsultorioMedico.Dominio.Entities;
 using ConsultorioMedico.Infra.Configuration;
+using ConsultorioMedico.Infra.InterfacesRepositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace ConsultorioMedico.Infra.Repositories
 {
